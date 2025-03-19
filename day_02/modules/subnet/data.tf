@@ -1,4 +1,3 @@
-
 data "aws_availability_zones" "available" {
   state = "available"
 
@@ -13,13 +12,5 @@ data "terraform_remote_state" "vpc" {
 
   config = {
     path = "../vpc/terraform.tfstate"
-  }
-}
-
-data "terraform_remote_state" "public_subnet" {
-  backend = "local"
-
-  config = {
-    path = "../subnet/terraform.tfstate"
   }
 }

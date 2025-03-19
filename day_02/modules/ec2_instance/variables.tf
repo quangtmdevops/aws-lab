@@ -15,31 +15,3 @@ variable "subnet_id" {
   type = string
 }
 
-variable "vpc_id" {
-    description = "The ID of the VPC."
-    type = string
-}
-
-variable "sg_from_port" {
-  description = "The start port for the security group"
-  type = number
-  default = 22
-}
-
-variable "sg_to_port" {
-  description = "The end port for the security group"
-  type = number
-  default = 22
-}
-
-variable "protocol" {
-  type = string
-  default = "tcp"
-}
-
-variable "sg_cidr_blocks" {
-  description = "The CIDR block for the security group"
-  type = list(string)
-  # default = ["222.252.28.231/32"]
-  default = ["0.0.0.0/0"]
-}

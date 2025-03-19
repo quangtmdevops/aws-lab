@@ -21,14 +21,3 @@ variable "public_subnet_cidr" {
     "10.0.6.0/24",
   ]
 }
-
-variable "public_subnet_az" {
-  description = "The availability zone for the public subnet."
-  type        = list(string)
-  default     = ["a", "b"]
-}
-
-variable "vpc_id" {
-  description = "The ID of the VPC."
-  type = string
-}
